@@ -14,16 +14,19 @@
 
     <!-- Meu CSS -->
     <link rel="stylesheet" href="./css/styles.css">
+
+
     <title>Ricky and Morty</title>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar bg-white">
+    <header class="container-fluid mb-5">
+        <nav class="navbar bg-body-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="./assets/images/RICK_MORTY_ICON-01.svg" alt="" width="40" height="40">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="./assets/images/RICK_MORTY_ICON-01.svg" alt="Icone Ricky and Morty" width="40"
+                        height="40">
                 </a>
             </div>
         </nav>
@@ -46,22 +49,47 @@
                     </div>
                 </div>
             </div>
-
-
-
         </section>
 
     </header>
 
-    <main>
+    <main class="container-fluid main-content">
         <section class="container">
             <div class="row" id="list-characters">
                 <!-- LISTA DE PERSONAGENS PELO JS -->
             </div>
         </section>
+
+        <nav aria-label="Page navigation example" id="pagination">
+            <!-- A páginação é construida pelo JS -->
+        </nav>
+
     </main>
 
-    <footer></footer>
+    <footer class="container-fluid pt-5">
+        <section class="container text-center w-75">
+            <div class="row text-uppercase fs-5 fw-bolder">
+                <div class="col-12 col-md-4">
+                    <p>Personagens: <span class="text-light" id="total-characters"></span></p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p>Localizações: <span class="text-light" id="total-locations"></span></p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p>Episódios: <span class="text-light" id="total-episodes"></span></p>
+                </div>
+            </div>
+
+            <div class="row fw-bolder copy">
+                <div class="col-12">
+                    <p>
+                        <small>Desenvolvido por: <span class="text-light" id="dev-name"></span> em
+                            <span class="text-light" id="current-year"></span>.</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
 
 
     <!-- Bootstrap JS -->

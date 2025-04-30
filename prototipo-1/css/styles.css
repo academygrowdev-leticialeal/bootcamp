@@ -2,6 +2,43 @@
     color: #105718;
 }
 
+.card-title {
+    font-size: 2rem;
+}
+
+#circle-status {
+    font-size: 10px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.copy {
+    margin-top: 128px;
+}
+
+footer {
+    background-color: #1f2821;
+    color: #848484;
+}
+
+.main-content {
+    background-color: #002003;
+    background-image: url(../assets/images/FUNDO.jpg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 600px;
+    padding-top: 40px;
+}
+
+.card-character {
+    background-color: #354338;
+    color: #ffff;
+    cursor: pointer;
+}
+
+
+/* Sobrescrita Bootstrap */
 .form-control {
     border-right: none;
 }
@@ -17,12 +54,4 @@
     color: #62ab60;
 }
 
-.card-title {
-    font-size: 2rem;
-}
 
-#circle-status {
-    font-size: 10px;
-    display: inline-block;
-    margin-right: 4px;
-}
