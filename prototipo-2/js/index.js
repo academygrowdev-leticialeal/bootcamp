@@ -37,51 +37,41 @@ function renderCharactersList(characters) {
     }
 
     const card = `
-            <div class="card mb-3 card-character" onclick="viewCharacterDetail(${
-              character.id
-            })">
-                <div class="row g-0">
-                    <div class="col-12 col-md-5">
-                        <div class="object-fit-fill border rounded h-100">
-                            <img src="${character.image}"
-                                class="w-100 h-100 rounded" alt="Foto do Personagem ${
-                                  character.name
-                                }">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                        <div class="card-body fw-bolder">
-                            <h5 class="card-title">${nameCharacter}</h5>
+      <div class="card shadow" onclick="viewCharacterDetail(${character.id})">
+          <img src="${character.image}" class="card-img-top"
+              alt="Foto do ${character.name}">
+          <div class="card-body fw-bolder">
+              <h5 class="card-title">${nameCharacter}</h5>
 
-                            <p class="card-text">
-                                <small>
-                                    <i id="circle-status" class="bi bi-circle-fill text-${
-                                      mapStatus(character.status).color
-                                    }"></i>
-                                    <span>${
-                                      mapStatus(character.status).text
-                                    } - ${mapSpecie(character.species)}</span>
-                                </small>
-                            </p>
+              <p class="card-text">
+                  <small>
+                      <i id="circle-status" class="bi bi-circle-fill text-${
+                        mapStatus(character.status).color
+                      }"></i>
+                      <span>
+                        ${mapStatus(character.status).text} 
+                        - 
+                        ${mapSpecie(character.species)}
+                      </span>
+                  </small>
+              </p>
 
 
-                            <p class="card-text">
-                                <small class="text-secondary">Última localização conhecida:</small><br>
-                                <small>${character.location.name}</small>
-                            </p>
+              <p class="card-text">
+                  <small class="text-secondary">Última localização conhecida:</small><br>
+                  <small>${character.location.name}</small>
+              </p>
 
-                            <p class="card-text">
-                                <small class="text-secondary">Visto a última vez em:</small><br>
-                                <small>${character.episode.name}</small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
+              <p class="card-text">
+                  <small class="text-secondary">Visto a última vez em:</small><br>
+                  <small>${character.episode.name}</small>
+              </p>
+          </div>
+      </div>
+  `;
 
     const col = document.createElement("div");
-    col.classList.add("col-12", "col-md-6");
+    col.classList.add("col-12", "col-md-6", "col-lg-4");
 
     col.innerHTML = card;
     row.appendChild(col);

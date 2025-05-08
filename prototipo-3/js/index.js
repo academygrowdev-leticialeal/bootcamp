@@ -29,7 +29,7 @@ function renderCharactersList(characters) {
   const row = document.getElementById("list-characters");
   row.innerHTML = "";
 
-  for (const character of characters) {
+  characters.forEach((character, index) => {
     let nameCharacter = character.name;
 
     if (nameCharacter.length > 18) {
@@ -85,7 +85,14 @@ function renderCharactersList(characters) {
 
     col.innerHTML = card;
     row.appendChild(col);
-  }
+
+    if (index === 18) {
+      const colEmpty = document.createElement("div");
+      colEmpty.classList.add("col-12", "col-md-6");
+
+      row.appendChild(colEmpty);
+    }
+  });
 }
 
 function renderPagination(prevPage, nextPage) {

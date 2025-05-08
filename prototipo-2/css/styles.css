@@ -20,21 +20,31 @@
 
 footer {
     background-color: #1f2821;
-    color: #848484;
+    color: #4c9c4a;
 }
 
 .main-content {
-    background-color: #002003;
+    background-color: #252525;
     background-image: url(../assets/images/FUNDO.jpg);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    padding-bottom: 600px;
+    padding-bottom: 500px;
     padding-top: 40px;
 }
 
 .detail {
     background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        padding-bottom: 250px;
+    }
+
+    .detail {
+        background-size: contain;
+    }
 }
 
 
@@ -62,9 +72,10 @@ footer {
 }
 
 .card {
-    background-color: #354338;
+    background-color: transparent;
     color: #ffff;
     cursor: pointer;
+    --bs-card-border-color: green;
 }
 
 
